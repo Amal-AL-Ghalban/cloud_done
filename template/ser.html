@@ -1,0 +1,60 @@
+
+{% extends "layout.html" %}
+{% block body %}
+  <section class="main-section">
+    <div class=" main-nav d-flex align-items-start">
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="but-bar nav-link" href="index.html">Upload</a>
+          <a class="but-bar nav-link active" href="ser.html">Search</a>
+          <a class="but-bar nav-link" href="display.html">Display</a>
+          <a class="but-bar nav-link" href="cache.html">mem-Cache</a>
+        </div>
+
+        <div class="container search-table">
+            <p><h2 align="center">search image</h2></p>
+                        <div class="search-box">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>Search All Fields</h5>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search all fields e.g. HTML">
+                                </div> 
+                                
+                            </div>
+                        </div>
+               <div id="result"></div>
+            </div>
+
+    </div>
+  </section>
+
+  <script>
+
+    $(document).ready(function(){
+      load_data();
+      function load_data(query)
+      {
+       $.ajax({
+        url:"/ajaxlivesearch",
+        method:"POST",
+        data:{query:query},
+        success:function(data)
+        {
+          $('#result').html(data);
+          $("#result").append(data.htmlresponse);
+        }
+       });
+      }
+      $('#search_text').keyup(function(){
+        var search = $(this).val();
+        if(search != ''){
+        load_data(search);
+       }else{
+        load_data();
+       }
+      });
+    });
+    </script>
+
+  {% endblock %}

@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block body %}
+  <section class="main-section">
+    <div class=" main-nav d-flex align-items-start">
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="but-bar nav-link" href="index.html">Upload</a>
+          <a class="but-bar nav-link" href="ser.html">Search</a>
+          <a class="but-bar nav-link active" href="display.html">Display</a>
+          <a class="but-bar nav-link" href="cache.html">mem-Cache</a>
+        </div>
+
+        <div class="container">
+          
+          <div >
+           <div >
+               <div >
+                   <div >
+                       <table style="margin-left: 10%;" class="table tabel-borderd w-100 table-tab table table-hover">
+                           <thead>
+                               <tr>
+                                   <th scope="col-8">File_name</th>
+                                   <th scope="col-4" >Fame</th>
+                                   
+                               </tr>
+                               </thead> 
+                               {% for row in imageelist %}
+                                   <tr>
+                                       <td><a href="#" id="{{row.fname}}" title=" "><img src="/static/uploads/{{row.file_name}}" height="50" width="50"/></a></td>
+                                       <td>{{row.fname}}</td>
+                                       
+                                   </tr>
+                               {% endfor %} 
+                       </table>
+                   </div>
+             </div>
+            </div>
+           </div>
+         </div>
+
+
+    </div>
+  </section>
+
+  <script>  
+    $(document).ready(function(){ 
+        $('a').tooltip({
+            classes:{
+                "ui-tooltip":"highlight"
+            },
+            position:{ my:'left center', at:'right+50 center'},
+            content:function(result){
+                $.post('/fetchdata', {
+                    id:$(this).attr('fname')
+                }, function(data){
+                    result(data.htmlRespone);
+                     
+                });
+            }
+        });
+    });  
+    </script>
+
+  {% endblock %}

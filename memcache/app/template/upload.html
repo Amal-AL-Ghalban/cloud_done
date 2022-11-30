@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="main-section">
+        <div class=" main-nav d-flex align-items-start">
+            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a class="but-bar nav-link" href="index.html" >Home</a>
+              <a class="but-bar nav-link active" href="upload.html">Upload</a>
+              <a class="but-bar nav-link" href="search.html">Search</a>
+              <a class="but-bar nav-link" href="setting.html">Settings</a>
+              <a class="but-bar nav-link" href="cache.html">Cache</a>
+            </div>
+            <div class="tab-log tab-content" id="v-pills-tabContent">
+              
+              <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                <div class="slide2">
+                    <img class="img-slide2" src="images/2.jpg" alt="">
+                    <div class="image-input">
+                      <form method="post" action="/upload" enctype="multipart/form-data"></form>
+                      <input type="file" accept="image/*" id="imageInput" name="inputFile">
+                      <label for="imageInput" class="image-button"><i class="far fa-image"></i> Choose image</label>
+                    </div>
+                    <input class="input-slide" type="text" value="Key">
+                    <input type="submit" value="Submit">
+                </div>
+              </div>
+              
+            
+            </div>
+          </div>
+    </section>
+      
+
+
+
+
+
+
+
+    <script src="js/jguery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/myjs.js"></script>  
+</body>
+</html>

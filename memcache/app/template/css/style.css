@@ -1,0 +1,119 @@
+/* Start General */
+*{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+.image-input
+	
+	input{
+		display: none;
+  }
+	label
+  {
+    margin-bottom: 10px;
+    border: 1px solid #f2f2f2;
+    background-image: linear-gradient(to right , #aa5c92 , #ffe4d9);
+    color: #f2f2f2;
+    width: 300px;
+    margin: 0 auto 10px;
+		display: block;
+		font-size: 115%;
+		cursor: pointer;
+  }
+
+
+body{
+    background-image: linear-gradient(to right,lightgray,#ffe4d9);
+    max-height: 100%;
+}
+
+/* End General */
+.main-section{
+margin-top : 10% !important;
+margin-bottom : 14% !important;
+
+}
+
+
+.but-bar.nav-link{
+  color: #ffffff;
+  margin-bottom: 35px;
+  background-image: linear-gradient(#bca6ef , #5e5378) !important;
+  border-radius:50% 5%;
+  text-align: center;
+}
+.but-bar.nav-link.active{
+  background-image: linear-gradient(#ffffff , #ffffff) !important;
+  border: #5e5378 solid 1px;
+  color:#5e5378 !important;
+}
+.img-home{
+  margin-left: 120px;
+}
+/* start tab 2 */
+.input-slide{
+  display: block;
+  margin-bottom: 10px;
+  border: 1px solid #f2f2f2;
+  background-image: linear-gradient(to right , #aa5c92 , #ffe4d9);
+  color: #f2f2f2;
+  width: 300px;
+  margin: 0 auto 10px;
+}
+.search-input{
+  position: relative;
+  padding-left: 48px;
+}
+.btn-search-icon{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.but-slide{
+  background-color: #aa5c92;
+  color: #fff;
+}
+.align-items-start{
+  margin: 0 auto !important;
+  width: 60% !important;
+}
+.slide2{
+/* position: absolute; */
+margin-left: 50%;
+width: 100%;
+border: 1px solid #f2f2f2;
+border-radius: 30px;
+transition: 0.5s ease;
+background: #fff;
+text-align: center;
+padding: 20px;
+}
+.img-slide2{
+  width: 180px;
+  /* height: 150px; */
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.table-tab{
+  color: #000;
+ background-color: #fff;
+}
+td{
+  padding: 50px;
+}
+.table-img{
+  width: 60px;
+  height: 60px;
+}
+.message-content.w-100.mx-auto.text-center{
+  width: 250% !important;
+  margin-left: 10% !important;
+}
+.search-img{
+ max-height: 250px !important;
+}

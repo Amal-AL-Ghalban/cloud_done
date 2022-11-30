@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Upload File  </title>
+   
+  </head>
+  <body>
+    
+  <body style="background-color:powderblue;"></body>
+  <h2> </h2>
+  <h1 style="color:blue;">Upload File and  save to Database  </h1>
+  <img  src="{{url_for('static',filename='images/2.jpg')}}" alt="">
+  <h3>Select a file to upload</h3>
+        <p>
+         {% with messages = get_flashed_messages() %}
+           {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-primary">
+             <strong>{{ message }}</strong>
+           </div>
+          {% endfor %}
+           {% endif %}
+         {% endwith %}
+        </p>
+  <form method="post" action="/upload" enctype="multipart/form-data">
+    key : <input type="text" name="fname" value="" placeholder="key" required>
+    
+    <dl>
+  <p>
+   <input type="file" name="inputFile" autocomplete="off" required>
+  </p>
+    </dl>
+    <p>
+  <input type="submit" value="Submit">
+ </p>
+ 
+</form>
+<style>
+.alert-primary {
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+}
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+    
+</style>
+<script src="js/jguery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/myjs.js"></script>  
+    </body>
+</html>

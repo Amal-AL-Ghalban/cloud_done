@@ -1,0 +1,20 @@
+
+<h3>{{numrows}} Records Found</h3>
+<table class="table table-striped custab">
+  <thead>
+      <tr>
+         
+         <th>File_name</th>
+         
+         <th>Fname</th>
+      </tr>
+  </thead>
+  <tbody>
+{% for row in imagee %}  
+   <tr>
+    
+    <td>{{row.file_name}}</td>
+    
+    <td>{{row.fname}}</td>
+   </tr>
+{% endfor %} 
